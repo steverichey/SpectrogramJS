@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+<title>SpectrogramJS</title>
+<style>
+	@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+	
+	body {
+		font-family: 'Open Sans', sans-serif;
+		font-size:1em;
+		text-align:left;
+	}
+	.box {
+		background-color:#dedede;
+		vertical-align:middle;
+		border-radius:0.5em;
+		position:absolute;
+		height:20em;
+		width:20em;
+		top:50%;
+		left:50%;
+		margin-top:-10em;
+		margin-left:-10em;
+	}
+	.title {
+		font-size:2em;
+		font-weight:bold;
+		padding-top:1em;
+		text-align:center;
+	}
+	.subtitle {
+		padding:1em;
+	}
+	a {
+		text-decoration:none;
+		font-weight:bold;
+		color:#f15a23;
+	}
+	a:hover {
+		text-decoration:none;
+		font-weight:bold;
+		color:#bd3200;
+	}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="spectrogram.js"></script>
+</head>
+<body>
+	<div class="box" id="box">
+		<div class="title">SpectrogramJS</div>
+		<div class="subtitle">Please upload your audio file below.</div>
+		<form>
+			<input type="file" name="fileupload" accept="image/*" /><br />
+			<input type="button" value="Begin" class="begin" />
+		</form>
+	</div>
+</body>
+</html>
