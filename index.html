@@ -32,10 +32,21 @@
 	.subtitle {
 		padding:1em;
 	}
+	.attrib {
+		position:absolute;
+		left:1em;
+		bottom:1em;
+	}
 	a {
 		text-decoration:none;
 		font-weight:bold;
 		color:#f15a23;
+	}
+	form {
+		
+	}
+	#output {
+		text-align:center;
 	}
 	a:hover {
 		text-decoration:none;
@@ -51,9 +62,13 @@
 		<div class="title">SpectrogramJS</div>
 		<div class="subtitle">Please upload your audio file below.</div>
 		<form>
-			<input type="file" name="fileupload" accept="image/*" /><br />
-			<input type="button" value="Begin" class="begin" />
+			<input type="file" id="fileupload" accept="image/*" /><br />
+			<input type="button" value="Begin" id="begin" />
 		</form>
+		<div id="output"></div>
+		<div id="download"><input type='button' value='Download' id='dlbutton' /></div>
+		<div id="result"></div>
+		<div class="attrib">SpectrogramJS by <a href="http://www.steverichey.com/">Steve Richey</a></div>
 	</div>
 </body>
 </html>

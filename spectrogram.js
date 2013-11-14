@@ -1,5 +1,18 @@
 $(document).ready(function() {
-    $('.begin').click(function () {
-        $("form").append('<div>Processing...<div>');
+	$('#download').hide();
+    $('#begin').click(function () {
+        if ( $( "#fileupload" ).val() != "" ) {
+			$('#output').html( "Processing..." );
+			downloadcomplete();
+		} else {
+			$('#output').html( "Please select a valid image file." );
+		}
     });
+	$('#dlbutton').click(function () {
+		console.log( "yep" );
+	});
+	var downloadcomplete = function () {
+		$('#output').html( "Processing complete..." );
+		$('#download').show();
+	};
 });
