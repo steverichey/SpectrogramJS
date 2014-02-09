@@ -53,22 +53,23 @@
 		font-weight:bold;
 		color:#bd3200;
 	}
+    canvas {
+        border: 1px solid black;
+    }
 </style>
-<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="spectrogram.js"></script>
 </head>
 <body>
 	<div class="box" id="box">
 		<div class="title">SpectrogramJS</div>
-		<div class="subtitle">Please upload your audio file below.</div>
+		<div class="subtitle">Please upload your image file below.</div>
 		<form>
-			<input type="file" id="fileupload" accept="image/*" /><br />
-			<input type="button" value="Begin" id="begin" />
+			<input type="button" value="Begin" id="begin" onclick="processImage()" />
 		</form>
-		<div id="output"></div>
+		<canvas id="spectrogramcanvas" width="100" height="100"></canvas>
 		<div id="download"><input type='button' value='Download' id='dlbutton' /></div>
 		<div id="result"></div>
-		<div class="attrib">SpectrogramJS by <a href="http://www.steverichey.com/">Steve Richey</a></div>
 	</div>
+    <div class="attrib">SpectrogramJS by <a href="http://www.steverichey.com/">Steve Richey</a></div>
 </body>
 </html>
