@@ -102,7 +102,7 @@ class Main
 		
 		while (i < imageData.data.length)
 		{
-			trace(imageData.data[i]);
+			imageData.data[i] = Std.int(Math.random() * 255);
 			
 			i++;
 		}

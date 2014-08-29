@@ -62,7 +62,7 @@ Main.prototype = {
 		this.imageData = util.ImageUtil.getImageData(this.image);
 		var i = 0;
 		while(i < this.imageData.data.length) {
-			console.log(this.imageData.data[i]);
+			this.imageData.data[i] = Std["int"](Math.random() * 255);
 			i++;
 		}
 		var img;
@@ -74,6 +74,10 @@ Main.prototype = {
 		img = util.ImageUtil.image;
 		Global.context.drawImage(img,0,0);
 	}
+};
+var Std = function() { };
+Std["int"] = function(x) {
+	return x | 0;
 };
 var util = {};
 util.ImageUtil = function() { };
@@ -91,5 +95,14 @@ util.ImageUtil.getImageData = function(From) {
 };
 var $_, $fid = 0;
 function $bind(o,m) { if( m == null ) return null; if( m.__id__ == null ) m.__id__ = $fid++; var f; if( o.hx__closures__ == null ) o.hx__closures__ = {}; else f = o.hx__closures__[m.__id__]; if( f == null ) { f = function(){ return f.method.apply(f.scope, arguments); }; f.scope = o; f.method = m; o.hx__closures__[m.__id__] = f; } return f; }
+Math.NaN = Number.NaN;
+Math.NEGATIVE_INFINITY = Number.NEGATIVE_INFINITY;
+Math.POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
+Math.isFinite = function(i) {
+	return isFinite(i);
+};
+Math.isNaN = function(i1) {
+	return isNaN(i1);
+};
 Main.main();
 })();
