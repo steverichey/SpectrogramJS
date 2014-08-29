@@ -1,0 +1,16 @@
+# Enable debugging
+# -debug
+
+# Add source directory to class path
+-cp src
+
+# Remove all unused code
+-dce full
+
+# Create JavaScript file
+-main Main
+-js bin/spectrogram.js
+
+# Copy HTML file
+-cmd "copy src\index.html bin\ /Y"
+-cmd "copy src\reset.css bin\ /Y"
