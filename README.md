@@ -2,6 +2,10 @@
 
 A JavaScript tool for obfuscating images in the [spectrogram](http://en.wikipedia.org/wiki/Spectrogram) data of audio files. Designed to be simple, free, and fast.
 
+## Status
+
+Drag-and-drop functionality is in place, with some arbitrary image manipulation, but audio export is not supported yet.
+	
 ## Usage
 
 Go [here](http://steverichey.github.io/SpectrogramJS/).
